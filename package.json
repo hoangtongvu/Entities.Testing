@@ -1,16 +1,17 @@
 {
-  "name": "com.darksun.core.testing",
+  "name": "com.darksun.entities.testing",
   "description": "Testing library for Unity.Entities.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "unity": "2022.3",
-  "displayName": "Core Testing",
+  "displayName": "Entities Testing",
   "dependencies": {
     "com.unity.entities": "1.2.0"
   },
   "keywords": [
     "DOTS",
     "Entities",
-    "ECS"
+    "ECS",
+	"Test"
   ],
   "author": {
     "name": "hoangtongvu"

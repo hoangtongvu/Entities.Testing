@@ -1,26 +1,23 @@
 using NUnit.Framework;
 using Unity.Entities;
 
-namespace Core.Testing
+namespace Entities.Testing;
+
+public abstract partial class ECSTestsFixture
 {
-    public abstract partial class ECSTestsFixture
-    {
-        protected World World { get; private set; }
-        protected EntityManager EntityManager { get; private set; }
+	protected World World { get; private set; }
+	protected EntityManager EntityManager { get; private set; }
 
-        [SetUp]
-        public virtual void SetUp()
-        {
-            World = new World("Test World");
-            EntityManager = World.EntityManager;
-        }
+	[SetUp]
+	public virtual void SetUp()
+	{
+		World = new World("Test World");
+		EntityManager = World.EntityManager;
+	}
 
-        [TearDown]
-        public virtual void TearDown()
-        {
-            World.Dispose();
-        }
-
-    }
-
+	[TearDown]
+	public virtual void TearDown()
+	{
+		World.Dispose();
+	}
 }
